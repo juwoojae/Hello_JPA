@@ -13,9 +13,9 @@
 
             <!-- 옵션 -->
             <property name="hibernate.show_sql" value="true"/>
-            <property name="hibernate.format_sql" value="true"/>
-            <property name="hibernate.use_sql_comments"  value="true"/>
-            <property name="hibernate.hbm2ddl.auto" value="create" />
+            <property name="hibernate.format_sql" value="true"/>  <!--쿼리문에 달아주는 주석-->
+            <property name="hibernate.use_sql_comments"  value="true"/> <!--쿼리문에 달아주는 주석-->
+            <property name="hibernate.hbm2ddl.auto" value="update" /> <!--기존 테이블 삭제 없이 새로운 엔티티만 적용-->
         </properties>
     </persistence-unit>
 
