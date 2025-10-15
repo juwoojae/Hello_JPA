@@ -10,6 +10,14 @@ import jakarta.persistence.Table;
 //@Table(name = "user")//테이블의 이름과 클래스의 이름이 다를수 있다.
 public class Member {
 
+    public Member() { //Entity 클래스의 생성자는 기본생성자도 가지고 있어야 한다
+    }
+
+    public Member(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     @Id //JPA 에게 primary_Key 가 뭔지를 알려주어야 한다.
     private Long id;
     //@Column(name = "username") //테이블의 속성과 클래스의 속성 이름이 다를수 있다.
