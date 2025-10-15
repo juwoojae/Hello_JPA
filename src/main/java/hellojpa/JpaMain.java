@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
+import static hellojpa.Config.emf;
+
 public class JpaMain {
 
     public static void main(String[] args) {
@@ -18,7 +20,6 @@ public class JpaMain {
          *
          * JPA 의 모든 데이터 변경은 트랜잭션 안에서 실행(조회는 ㄴ)
          */
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
         tx.begin(); //트랜잭션 시작 Autocommit false
@@ -51,10 +52,6 @@ public class JpaMain {
         } finally{ //하나의 트랜잭션이 끝나면, 무조건 리소스를 반납해주어야한다
             em.close();
         }
-
-        tx.commit();
-
-        em.close();
         emf.close();
     }
 }
