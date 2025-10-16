@@ -1,6 +1,5 @@
-package hellojpa.permanance;
+package hellojpa.persistent;
 
-import hellojpa.Config;
 import hellojpa.Member;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
@@ -15,7 +14,7 @@ import static hellojpa.Config.*;
  * 4. 변경 감지 (Dirty Checking)
  * 5. 지연 로딩 (Lazy Loading)
  */
-public class Permanace {
+public class Persistent {
 
     final static EntityManager em = emf.createEntityManager(); //EntityManager 가지고오기
 

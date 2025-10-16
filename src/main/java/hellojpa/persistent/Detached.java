@@ -1,4 +1,4 @@
-package hellojpa.permanance;
+package hellojpa.persistent;
 
 import hellojpa.Member;
 import jakarta.persistence.EntityManager;
@@ -9,7 +9,7 @@ import static hellojpa.Config.emf;
 /**
  * 준영속 상태 실습
  */
-public class Detach {
+public class Detached {
 
     final static EntityManager em = emf.createEntityManager(); //EntityManager 가지고오기
 
