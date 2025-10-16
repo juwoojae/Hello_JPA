@@ -1,4 +1,4 @@
-package hellojpa.relation;
+package hellojpa.relation.bothWay;
 
 import jakarta.persistence.*;
 
@@ -22,7 +22,7 @@ public class Member {
     //    private Long teamId;
 
     @ManyToOne //N to 1
-    @JoinColumn(name = "TEAM_ID") //실제로 조인하는 컬럼이 뭔지
+    @JoinColumn(name = "TEAM_ID") //실제로 조인하는 컬럼이 뭔지(PK)
     private Team team;
 
     public int getId() {

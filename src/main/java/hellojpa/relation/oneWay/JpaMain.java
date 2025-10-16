@@ -1,5 +1,4 @@
-package hellojpa.relation;
-
+package hellojpa.relation.oneWay;
 import jakarta.persistence.*;
 
 import static hellojpa.Config.emf;

@@ -1,14 +1,20 @@
-package hellojpa.relation;
+package hellojpa.relation.oneWay;
 
 import jakarta.persistence.*;
 
-@Entity
+//@Entity
 public class Team {
     @Id @GeneratedValue
     @Column(name = "TEAM_ID")
     private Long id;
     private String name;
 
+
+    public Team() {
+    }
+    public Team(String name) {
+        this.name = name;
+    }
     public Long getId() {
         return id;
     }
