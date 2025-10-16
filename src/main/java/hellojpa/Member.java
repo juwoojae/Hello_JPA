@@ -21,7 +21,7 @@ import java.util.Date;
  *         primary key (id)
  *     )
  */
-@Entity
+//@Entity
 public class Member {
     /// primary Key 매핑
     @Id
