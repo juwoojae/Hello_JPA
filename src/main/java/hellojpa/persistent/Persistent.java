@@ -30,7 +30,7 @@ public class Persistent {
             //비영속
             Member member = new Member();
             member.setId(4L);
-            member.setName("JPA");
+            member.setUserName("JPA");
 
             //영속
             System.out.println("===BEFORE===");
@@ -40,7 +40,7 @@ public class Persistent {
             Member findMember = em.find(Member.class, 4L);//select 쿼리를 안던진다. 영속성 컨텍스트에 저장되어있는 1차캐시에서 가져오기 때문이다.
 
             System.out.println("findMember.getId = " + findMember.getId());
-            System.out.println("findMember.getName = " + findMember.getName());
+            System.out.println("findMember.getName = " + findMember.getUserName());
 
             tx.commit(); //커밋을 해야지만 dp 에 쿼리가 날라가게 된다.
         } catch (Exception e) {
@@ -78,11 +78,11 @@ public class Persistent {
          */
         tx.begin();
         try {
-           Member member1 = new Member(150L, "A");
-           Member member2 = new Member(160L, "B");
+//           Member member1 = new Member(150L, "A");
+//           Member member2 = new Member(160L, "B");
 
-           em.persist(member1);
-           em.persist(member2); //영속성 컨텍스트에 쌓임과 동시에 SQL 도 누적되서 쌓인다
+//           em.persist(member1);
+//           em.persist(member2); //영속성 컨텍스트에 쌓임과 동시에 SQL 도 누적되서 쌓인다
             System.out.println("==============");
 
             tx.commit(); //커밋을 해야지만 dp 에 쿼리가 날라가게 된다.
@@ -103,7 +103,7 @@ public class Persistent {
         tx.begin();
         try {
             Member member = em.find(Member.class, 1L);
-            member.setName("ZZZZZ");
+            member.setUserName("ZZZZZ");
             //em.update(member) 이런 코드가 있어야하지 않을까?
             tx.commit(); //커밋을 해야지만 dp 에 쿼리가 날라가게 된다.
         } catch (Exception e) {

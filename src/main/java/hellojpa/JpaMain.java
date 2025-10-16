@@ -42,10 +42,10 @@ public class JpaMain {
 //            findMember.setName("HelloJPA"); //변경내역이 생긴다
             //JPQL
             // 애플리케이션이 필요한 데이터만 DB 에서 불러오려면 결국 검색 조건이 포함된 SQL 이 필요하다!!
-            List<Member> result = em.createQuery("select m from Member as m", Member.class).getResultList(); //table 대상이아닌, Member Entity 를 대상으로 가지고 온다
-            for (Member member : result) {
-                System.out.println("member.name = " + member.getName());
-            }
+//            List<Member> result = em.createQuery("select m from Member as m", Member.class).getResultList(); //table 대상이아닌, Member Entity 를 대상으로 가지고 온다
+//            for (Member member : result) {
+//                System.out.println("member.name = " + member.getUserName());
+//            }
             tx.commit();
         }catch(Exception e){
             tx.rollback();

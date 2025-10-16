@@ -20,7 +20,7 @@ public class Detached {
         try {
             //영속
             Member member = em.find(Member.class, 150L); //한 트랜잭션에서 처음으로 실행할때 쿼리가 나간다
-            member.setName("AAAAA");
+            member.setUserName("AAAAA");
 
             em.detach(member);//비영속 선언
             //em.clear(); //통으로 영속성 컨텍스트 초기화

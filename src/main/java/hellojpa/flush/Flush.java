@@ -27,8 +27,8 @@ public class Flush {
         tx.begin(); //트랜잭션 시작
         try {
             //비영속
-            Member member = new Member(200L, "member200");
-            em.persist(member);
+            //Member member = new Member(200L, "member200");
+            //em.persist(member);
             em.flush(); //쿼리가 먼저 나간다
 
             System.out.println("==============");
