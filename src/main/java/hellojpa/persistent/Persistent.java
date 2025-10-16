@@ -1,6 +1,6 @@
 package hellojpa.persistent;
 
-import hellojpa.Member;
+import hellojpa.entityMapping.annotation.Member;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 

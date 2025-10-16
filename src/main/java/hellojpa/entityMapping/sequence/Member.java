@@ -6,7 +6,7 @@ import jakarta.persistence.*;
  * sequence 전략 특징
  * 데이터베이스 시퀀스는 유일한 값을 순서대로 생성하는 특별한 데이터베이스 오브젝트 (oracle 시퀀스)
  */
-@Entity
+//@Entity
 @SequenceGenerator(name = "MEMBER_SEQ_GENERATOR"
         , sequenceName = "MEMBER_SEQ"
         , initialValue = 1, allocationSize = 50

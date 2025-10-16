@@ -1,6 +1,5 @@
 package hellojpa.flush;
 
-import hellojpa.Member;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 
