@@ -15,7 +15,7 @@ import java.util.List;
  * 주인은 mappedBy 속성 사용 X
  * 주인이 아니면 mappedBy 속성으로 주인지정
  */
-@Entity
+//@Entity
 public class Team {
     @Id @GeneratedValue
     @Column(name = "TEAM_ID")
@@ -23,7 +23,7 @@ public class Team {
     private String name;
 
     @OneToMany(mappedBy = "team")//누구랑 매핑되어있는지
-    private List<Member> members = new ArrayList<>();
+    private List<Member> members = new ArrayList<>(); //주인의 반대편
 
     public Team() {
     }

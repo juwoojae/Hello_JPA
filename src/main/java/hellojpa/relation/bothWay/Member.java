@@ -8,7 +8,7 @@ import jakarta.persistence.*;
  * 객체는 참조를 사용해서 연관된 객체를 찾는다.
  * 테이블과 객체 사이에는 이런 간격이 있다.
  */
-@Entity
+//@Entity
 public class Member {
 
     @Id @GeneratedValue
@@ -23,7 +23,7 @@ public class Member {
 
     @ManyToOne //N to 1
     @JoinColumn(name = "TEAM_ID") //실제로 조인하는 컬럼이 뭔지(PK)
-    private Team team;
+    private Team team; //연관관계의 주인
 
     public int getId() {
         return id;
