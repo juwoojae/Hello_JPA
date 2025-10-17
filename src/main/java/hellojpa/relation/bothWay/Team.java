@@ -27,6 +27,10 @@ public class Team {
 
     public Team() {
     }
+    public void addMember(Member member) {
+        //member.setTeam(this)
+        members.add(member);
+    }
     public Team(String name) {
         this.name = name;
     }
@@ -53,4 +57,5 @@ public class Team {
     public void setMembers(List<Member> members) {
         this.members = members;
     }
+
 }
